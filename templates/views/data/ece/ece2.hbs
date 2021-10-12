@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    {{>headerLinks}}
+
+  <link rel="stylesheet" href="css/study.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBARS -->
+    {{>navbar}}
+
+    <!-- STUDY MATERIAL -->
+
+
+    <div class="py-5 text-center my-4" id="sbg">
+        <img class="d-block mx-auto mb-2 logo" src="./img/College Forest2.png" alt="" width="72" height="72">
+        <h2 style="color: whitesmoke;">Everything You Need is Here!!!</h2>
+        <p class="lead" style="color: whitesmoke;">“Give me six hours to chop down a tree and I will spend the first
+            four sharpening the axe.”
+            <br> ― Abraham Lincoln
+        </p>
+    </div>
+
+
+
+    <center>
+        <h1 style="color: rebeccapurple; font-weight:700;">ECE SEM 2</h1>
+
+    </center>
+    <hr>
+    <br><br>
+    <h2 style="color: brown;">SUBJETS : </h2>
+
+    <br><br>
+
+
+    <div id="myBtnContainer">
+        <h1>On Progress...</h1>
+        {{!-- subjects --}}
+
+        {{!-- <button class="btn" onclick="filterSelection('bs115')"> Semiconductor Physics : BS-115</button>
+        <button class="btn" onclick="filterSelection('es105')">Programming for Problem Solving : ES-105 </button>
+        <button class="btn" onclick="filterSelection('es109')"> Engineering Graphics & Design : ES-109</button>
+        <button class="btn" onclick="filterSelection('bs141')"> Biology : BS-141 </button>
+        <button class="btn" onclick="filterSelection('bs133')"> Calculus & Linear Algebra : BS-133</button>
+        <button class="btn" onclick="filterSelection('es107l')"> ES-107L Programming for Problem Solving Lab</button>
+        <button class="btn" onclick="filterSelection('bs117l')"> BS-117L Semiconductor Physics Lab</button> --}}
+    </div>
+    <br><hr>
+    <h2 style="color: brown;">MATERIAL : </h2>
+
+    <div class="container">
+        <h1>On Progress...</h1>
+
+        {{!-- MATHS --}}
+
+        <a href="https://drive.google.com/drive/folders/1Tk15b7Sw5RyiJux3aM1S1RmDJ7Bxi6Q1?usp=sharing" target="_blank">
+            <div class="filterDiv math">lecture 1</div>
+        </a>
+        <a href="https://drive.google.com/file/d/168rgQL1XZGBFynPp0DGSWuouXRYfjcKO/view?usp=sharing" target="_blank">
+            <div class="filterDiv math">lecture 2</div>
+        </a>
+        <a href="https://drive.google.com/file/d/168rgQL1XZGBFynPp0DGSWuouXRYfjcKO/view?usp=sharing" target="_blank">
+            <div class="filterDiv math">lecture 3</div>
+        </a>
+        <a href="https://drive.google.com/file/d/168rgQL1XZGBFynPp0DGSWuouXRYfjcKO/view?usp=sharing" target="_blank">
+            <div class="filterDiv math">lecture 4</div>
+        </a>
+        <a href="https://drive.google.com/file/d/168rgQL1XZGBFynPp0DGSWuouXRYfjcKO/view?usp=sharing" target="_blank">
+            <div class="filterDiv math">lecture 5</div>
+        </a>
+
+
+        {{!-- OOPS --}}
+
+    </div>
+
+
+
+    <hr class="featurette-divider">
+    <!-- Footer -->
+    {{>footer}}
+
+    <script>
+        // filterSelection("all")
+
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("filterDiv");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
+                }
+            }
+        }
+
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+
+
+
+
+
+   <!-- Modal -->
+    {{>modals}}
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            datahide.classList.add("data_hide");
+            datahide.classList.add("vh");
+        });
+
+
+    </script>
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
