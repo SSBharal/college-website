@@ -1,0 +1,378 @@
+#sl {
+    /* border: 2px solid red; */
+    margin: 5px 0px;
+}
+
+#intro {
+    /* background-image: url("https://mdbootstrap.com/img/new/fluid/city/018.jpg"); */
+    background: url(https://mdbootstrap.com/img/new/fluid/city/018.jpg) no-repeat center center/cover;
+    height: 100vh;
+    /* width: 100vw; */
+}
+
+#sbg {
+    /* background-image: url('https://source.unsplash.com/random'); */
+    /* background-image: url('https://source.unsplash.com/1200x600/?light'); */
+    /* background-image: url('https://cdn.pixabay.com/photo/2017/10/30/18/44/hacking-2903156_960_720.jpg'); */
+    background-color: rgb(0, 0, 0);
+}
+
+.bg-cover {
+    height: 100vh;
+}
+
+@media(min-width:991px) {
+    #navbarSupportedContent {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}
+
+.featurette {
+    max-width: 90vw;
+}
+
+.firstHalf {
+    margin: auto 0px;
+    /* margin-left: 20px; */
+    /* padding-left: 45px; */
+    /* padding: 0 5px; */
+    padding: 10px 0px;
+    /* margin: 0% 20px; */
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.bgr {
+    /* max-width: 95vw; */
+    /* border: 2px solid red; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 575px) {
+    .secondHalf {
+        display: none;
+    }
+}
+
+button a:hover {
+    text-decoration: none;
+}
+
+
+/* .secondHalf {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+@media(max-width:768px) {
+    .firstHalf {
+        margin-bottom: 300px;
+    }
+}
+
+.button {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 6px 4px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+}
+
+.button1:hover {
+    box-shadow: 0 12px 16px 0 rgba(250, 247, 247, 0.24), 0 17px 50px 0 rgba(158, 152, 152, 0.19);
+    background-color: white;
+    color: black;
+}
+
+.button_join {
+    background-color: transparent;
+    color: rgb(22, 12, 12);
+    border: 1px solid rgb(7, 5, 5);
+    border-radius: 8px;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 6px 4px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+}
+
+.button2:hover {
+    box-shadow: 0 12px 16px 0 rgba(250, 247, 247, 0.24), 0 17px 50px 0 rgba(158, 152, 152, 0.19);
+    background-color: rgb(29, 6, 230);
+    color: black;
+}
+
+.about-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 70px;
+}
+
+.img-rounded {
+    width: 300px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.sec-mg {
+    margin: 5% 0px;
+}
+
+#myDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/* #Animation css  */
+
+.box {
+    /* background: url(img1/logo.jpg) no-repeat center; */
+    background-size: cover;
+    /* border: 2px solid red; */
+    position: relative;
+    width: 180px;
+    height: 180px;
+    transform-style: preserve-3d;
+    animation: animate 20s linear infinite;
+}
+
+.box img {
+    opacity: 0.6;
+}
+
+@keyframes animate {
+    0% {
+        transform: perspective(1000px) rotateX(0deg) rotateY(35deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateX(360deg) rotateY(35deg);
+    }
+}
+
+.box span {
+    position: absolute;
+    /* border: 2px solid red; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateX(calc(var(--i)* 45deg)) translateZ(300px);
+}
+
+.box span img {
+    position: absolute;
+    /* border: 2px solid red; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 575px) {
+    .box {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 575px) {
+    .snow {
+        display: none;
+    }
+}
+
+.formgoogle {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    height: 100vh;
+    /* width: 100vw; */
+    background: rgb(223, 219, 219);
+}
+
+.fa-snowflake {
+    /* size: 50px; */
+    transition: all linear;
+    animation: rot 2s linear infinite;
+    /* color: var(--main-color); */
+    color: rgb(24, 24, 46);
+}
+
+@keyframes rot {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#dataMaterial {
+    display: flex;
+    justify-content: center;
+}
+
+@media(max-width:575px) {
+    #dataMaterial {
+        justify-content: flex-start;
+    }
+}
+
+
+/* Filteration CSS  */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+.filter-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background: white;
+    border-bottom: 1px solid #E4D7D7;
+}
+
+.filter-links li {
+    display: inline;
+    float: left;
+}
+
+.filter-links li a {
+    display: block;
+    color: black;
+    padding: 1em 2em;
+    text-decoration: none;
+}
+
+.filter-links li a:hover {
+    color: red;
+}
+
+.filter-links li a:active {
+    color: rgb(8, 3, 3);
+}
+
+
+/* .filter-links li a:visited .cse {
+    color: yellow;
+}
+
+.filter-links li a:visited .ece {
+    color: blue;
+}
+
+.filter-links li a:visited .mech {
+    color: red;
+}
+
+.filter-links li a:visited .biotech {
+    color: brown;
+} */
+
+.filter-sections {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+.filter-sections div {
+    opacity: 0;
+    display: none;
+    min-height: 50px;
+    margin: 0.5em;
+    text-align: center;
+    padding: 2em 1em;
+    float: left;
+    transition: all 500s ease;
+}
+
+.data_hide {
+    display: none;
+}
+
+.vh {
+    visibility: hidden;
+}
+
+.filter-sections {
+    /* display: none; */
+}
+
+.view {
+    display: block !important;
+    opacity: 1 !important;
+    transform: scale(1) rotate(0deg);
+    border-radius: 4px;
+    animation: selected 300ms 1 ease-in-out;
+}
+
+@keyframes selected {
+    0% {
+        border-radius: 100%;
+        transform: scale(0) rotate(-180deg);
+    }
+}
+
+.cse {
+    background-color: yellow;
+    color: black;
+}
+
+.ece {
+    background: blue;
+    color: white;
+}
+
+.mech {
+    background: red;
+    color: white;
+}
+
+.biotech {
+    background: brown;
+    color: white;
+}
+
+
+/* Joining form  */
+
+#join_form {
+    padding: 2px 2px;
+}
