@@ -140,7 +140,7 @@ app.get("/biotech8", (req, res) => {
 
 
 app.get("*", (req, res) => {
-    res.render('404page', {
+    res.status(404).render('404', {
         errorMsg: "Opps! page not found, Click Here to go back"
     })
 })
