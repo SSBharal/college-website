@@ -19,12 +19,6 @@ app.get("/", (req, res) => {
     res.render('index')
 })
 
-app.get("*", (req, res) => {
-    res.status(404).render('404', {
-        errorMsg: "Opps! page not found, Click Here to go back"
-    })
-})
-
 // app.get("/papers", (req, res) => {
 //     res.render('papers')
 // })
@@ -145,6 +139,11 @@ app.get("/biotech8", (req, res) => {
     res.render('data/biotech/biotech8.hbs')
 })
 
+app.get("*", (req, res) => {
+    res.status(404).render('404', {
+        errorMsg: "Opps! page not found, Click Here to go back"
+    })
+})
 
 app.listen(port, () => {
     console.log(`listening to the port no at ${port}`);
