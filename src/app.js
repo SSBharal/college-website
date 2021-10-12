@@ -19,9 +19,16 @@ app.get("/", (req, res) => {
     res.render('index')
 })
 
+app.get("*", (req, res) => {
+    res.status(404).render('404', {
+        errorMsg: "Opps! page not found, Click Here to go back"
+    })
+})
+
 // app.get("/papers", (req, res) => {
 //     res.render('papers')
 // })
+
 
 
 app.get("/studymaterial", (req, res) => {
@@ -136,13 +143,6 @@ app.get("/biotech7", (req, res) => {
 })
 app.get("/biotech8", (req, res) => {
     res.render('data/biotech/biotech8.hbs')
-})
-
-
-app.get("*", (req, res) => {
-    res.status(404).render('404', {
-        errorMsg: "Opps! page not found, Click Here to go back"
-    })
 })
 
 
