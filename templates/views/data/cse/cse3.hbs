@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    {{>headerLinks}}
+
+    <link rel="stylesheet" href="css/study.css">
+
+
+
+</head>
+
+<body>
+
+    <!-- NAVBARS -->
+    {{>navbar}}
+
+    <!-- STUDY MATERIAL -->
+
+
+    <div class="py-5 text-center my-4" id="sbg">
+        <img class="d-block mx-auto mb-2 logo" src="./img/College Forest2.png" alt="" width="72" height="72">
+        <h2 style="color: whitesmoke;">Everything You Need is Here!!!</h2>
+        <p class="lead" style="color: whitesmoke;">“Give me six hours to chop down a tree and I will spend the first
+            four sharpening the axe.”
+            <br> ― Abraham Lincoln
+        </p>
+    </div>
+
+
+
+    <center>
+        <h1 style="color: rebeccapurple; font-weight:700;">CSE SEM 3</h1>
+
+    </center>
+    <hr>
+    <br><br>
+    <h2 style="color: brown;">SUBJETS : </h2>
+
+    <br><br>
+
+
+    <div id="myBtnContainer">
+        {{!-- subjects --}}
+
+        <button class="btn" onclick="filterSelection('esa')"> ES-205 Principles of Programming
+            Languages</button>
+        <button class="btn" onclick="filterSelection('pccs201')">PC-CS201
+            Data Structure and Algorithms </button>
+        <button class="btn" onclick="filterSelection('es207')"> ES-207 Digital Electronics</button>
+        <button class="btn" onclick="filterSelection('pccs203')"> PC-CS203
+            Object Oriented Programming </button>
+        <button class="btn" onclick="filterSelection('bs205')"> BS-205 Mathematics-III</button>
+        <button class="btn" onclick="filterSelection('hm902')"> HM-902 Business Intelligence and
+            Entrepreneurship</button>
+        <button class="btn" onclick="filterSelection('pccs205l')"> PC-CS205 L
+            Data Structure and Algorithms Lab</button>
+        <button class="btn" onclick="filterSelection('es209l')">ES-209L Digital Electronics Lab</button>
+        <button class="btn" onclick="filterSelection('pccs207l')">PC-CS207 L
+            Object Oriented Programming Lab</button>
+        <button class="btn" onclick="filterSelection('pyc3')"> Previous Year Papers</button>
+        <button class="btn" onclick="filterSelection('syc3')"> syllabus 2nd year CSE</button>
+    </div>
+    <br>
+    <hr>
+    <h2 style="color: brown;">MATERIAL : </h2>
+
+    <div class="container">
+        {{!-- <h1>On Progress...</h1> --}}
+
+        {{!-- MATHS --}}
+
+        <a href="https://drive.google.com/drive/folders/1X1p2mMUlVkPMUl3FKmXLHHq7mQ60xcf2?usp=sharing" target="_blank">
+            <div class="filterDiv esa">PL Materials</div>
+        </a>
+        <a href="https://drive.google.com/drive/folders/1eigIjoRoicEkXlfZKCLXH5B4TrW4vhQi?usp=sharing" target="_blank">
+            <div class="filterDiv pccs201">DSA Materials</div>
+        </a>
+        <a href="https://drive.google.com/drive/folders/1BN0ZQtG5QiFefuTyP37NeGi_T4dv3cWD?usp=sharing" target="_blank">
+            <div class="filterDiv es207">DE Materials</div>
+        </a>
+        <a href="https://drive.google.com/drive/folders/1XDONir37kfLrVfLCycZTs9ixRSMoorwU?usp=sharing" target="_blank">
+            <div class="filterDiv pccs203">OOPS Material</div>
+        </a>
+
+        <a href="https://drive.google.com/drive/folders/14ytOGKOoonrmPpHK0Jh884QuUW7IgwuV?usp=sharing" target="_blank">
+            <div class="filterDiv bs205">Maths Material</div>
+        </a>
+
+        <a href="https://drive.google.com/drive/folders/1gJNJ4Mm9S22dkfmpxWytVhfOxUq4_pvh?usp=sharing" target="_blank">
+            <div class="filterDiv hm902">BIE Material</div>
+        </a>
+        <a href="https://drive.google.com/drive/folders/1k3Pz7xZaNd4ymj2nkMKGkF4R8Pjp5aK2?usp=sharing" target="_blank">
+            <div class="filterDiv pccs205l">DSA Lab Material</div>
+        </a>
+        <a href="https://drive.google.com/drive/folders/1cLnvF5cHGQKIYoOewiaQpuXizWn2uv4O?usp=sharing" target="_blank">
+            <div class="filterDiv pccs207l">OOPS Lab Material</div>
+        </a>
+        <a href="https://drive.google.com/drive/folders/1RlNiLpH_YRdhwXs2kaBmlFh9p4zRTNgB?usp=sharing" target="_blank">
+            <div class="filterDiv pyc3">Previous Year papers</div>
+        </a>
+        <a href="https://drive.google.com/file/d/1m999up3n8CWcT2SCg3sx7kff6lj9Qh-B/view?usp=sharing" target="_blank">
+            <div class="filterDiv syc3">syllabus 2nd year CSE</div>
+        </a>
+
+
+        {{!-- OOPS --}}
+
+    </div>
+
+
+
+    <hr class="featurette-divider">
+    <!-- Footer -->
+    {{>footer}}
+
+    <script>
+        // filterSelection("all")
+
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("filterDiv");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
+                }
+            }
+        }
+
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+
+
+
+
+    <!-- Modal -->
+    {{>modals}}
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            datahide.classList.add("data_hide");
+            datahide.classList.add("vh");
+        });
+
+
+    </script>
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
